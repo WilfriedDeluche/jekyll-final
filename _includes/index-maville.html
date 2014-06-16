@@ -1,0 +1,48 @@
+<div class="container-maville">
+	<h1>Ma Ville</h1>
+	
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<ul class="list-group">
+	  				<a href="{{ site.collections.maville.categories[0] | downcase | replace:' ','-' | replace:'é','e' | prepend: site.url}}" class="list-group-item">{{ site.collections.maville.categories[0] }}
+					</a>
+					<a href="{{ site.collections.maville.categories[1] | downcase | replace:' ','-' | replace:'é','e' | prepend: site.url}}" class="list-group-item">{{ site.collections.maville.categories[1] }}
+					</a>
+					<a href="{{ site.collections.maville.categories[2] | downcase | replace:' ','-' | replace:'é','e' | prepend: site.url}}" class="list-group-item">{{ site.collections.maville.categories[2] }}
+					</a>
+					<a href="{{ site.collections.maville.categories[3] | downcase | replace:' ','-' | replace:'é','e' | prepend: site.url}}" class="list-group-item">{{ site.collections.maville.categories[3] }}
+					</a>
+					
+			</ul>
+		</div>
+
+	
+		    
+
+			<div class="col-md-8 hidden-xs">
+				
+				<ul class="media-list">
+	   					{% for doc in site.articles  | limit: 2 %}{% if doc.en-une %}     
+      					<li class="media">
+        					<!--<span class="post-date">{{ doc.pub-date  }}</span>-->
+        					<a class="pull-left" href="{{ doc.url | prepend: site.baseurl }}">
+        						<img class"media-object" src="http://placehold.it/128x128"></a>
+        					<div class"media-body">
+        						
+        						<blockquote>
+        						
+        						<p>{{ doc.content | strip_html | truncate: 200 }}</p>
+        						<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        						</blockquote>
+        					</div>
+      					</li>
+      					{% endif %}{% endfor %}
+	   			</ul>
+			</div> 
+			
+		  
+		
+	</div>
+
+
+</div>

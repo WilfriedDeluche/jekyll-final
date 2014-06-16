@@ -1,0 +1,30 @@
+<div class="container-service">
+	<h1> A Votre Service</h1>
+	
+	<div class="row">
+		<div class="col-md-10 col-md-offset-2">
+
+			<div class="col-md-5">
+				<p class="lead"><i class="fa fa-user fa-2x"></i> Citoyens</p>
+				
+				<ul class="list-group">
+			  				<a href="{{ site.collections.citoyens.categories[0] | downcase | replace:' ','-' | prepend: site.url   }}" class="list-group-item">Vos Contacts</a>
+							<a href="{{ site.collections.citoyens.categories[1] | downcase | replace:' ','-' | prepend: site.url   }}" class="list-group-item list-group-item-succ">Annuaire des entreprises</a>
+							<a href="{{ site.collections.citoyens.categories[2] | downcase | replace:' ','-' | prepend: site.url   }}" class="list-group-item">Poster une Offre</a>
+							
+				</ul>
+			</div> 
+			<div class="col-md-5">
+				
+				<p class="lead"><i class="fa fa-building fa-2x"></i> Entreprises</p>
+				<ul class="list-group">
+			  			<a href="{{ site.collections.entreprises.categories[0] | downcase | replace:' ','-' | prepend: site.url }}" class="list-group-item">Vos Contacts</a>
+							
+						<a href="{{ site.collections.entreprises.categories[1] | downcase | replace:' ','-' | prepend: site.url }}" class="list-group-item">Poster une Offre</a>
+							
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+

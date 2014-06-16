@@ -1,0 +1,44 @@
+---
+layout: offre
+title: Offres de Formation
+---
+
+
+
+<div class="container">
+	<div class="col-md-8 col-md-offset-2">
+
+
+		<ul class="offres">
+		   	{% assign docs = site.offres | where:"flux","formation" %} 
+		   	{% for doc in docs %} 
+		      	<li class="">
+		      		<article class="post-index-content ">
+		        	<p class="post-date">{{ doc.pub-date  }}</p> 
+		        	<span class="post-ville"><i class="fa fa-map-marker"> </i> {{doc.ville}}</span> 
+		        	 
+		        	 
+		        	<a class="post-link" href="{{ doc.url | prepend: site.baseurl }}"><h3>{{ doc.title }}</h3></a>
+		        	
+  						{{ doc.content | truncatewords: 200 }}
+  					
+  						<div class="foot-index-offres">
+  						<div class="pull-left">
+  							<p class="post-origine">{{ doc.origine }}</p>
+  						</div>
+  						<div class="pull-right">
+  							
+  							<a href="" class="btn btn-default"><span class=" fa fa-envelope fa-lg"></span></a>
+  							<a href="" class="btn btn-default"><span class=" fa fa-facebook fa-lg"></span></a>
+  							<a href="" class="btn btn-default"><span class=" fa fa-twitter fa-lg"></span></a>
+  							<a href="" class="btn btn-default"><span class=" fa fa-google-plus fa-lg"></span></a>
+  						</div>
+  						</div>
+  					</article>
+
+		      	</li>
+		    {% endfor %}
+		</ul>
+	</div>
+
+</div>

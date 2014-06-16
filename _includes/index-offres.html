@@ -1,0 +1,55 @@
+
+<div class="container-offres">
+	<h1>Les Offres</h1>
+	<div class="row visible-md visible-lg">
+
+		<div class="col-md-8 col-md-offset-4">
+			<p class="lead text-left">Les dernières offres</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<ul class="list-group">
+	  				<a href="{{ site.collections.offres.flux[0] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.offres.flux[0]  }}
+					<span class="badge">1344</span></a>
+					<a href="{{ site.collections.offres.flux[1] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.offres.flux[1] }}
+					<span class="badge">278</span></a>
+					<a href="{{ site.collections.offres.flux[2] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.offres.flux[2] }}
+					<span class="badge">278</span></a>
+					<a href="{{ site.collections.offres.flux[3] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.offres.flux[3] }}
+					<span class="badge">278</span></a>
+					<a href="{{ site.collections.offres.flux[4] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.offres.flux[4] }}
+					<span class="badge">278</span></a>
+				</ul>
+		</div>
+
+			    
+			<div class="col-md-4">
+
+			<p class="lead text-left visible-xs">Les dernières offres</p>
+				
+				<ul class="posts">
+	   						{% for doc in site.offres limit:16 %}     
+	      					<li>
+	        					<!--<span class="post-date">{{ doc.pub-date  }}</span>-->
+	        					<a class="post-link-two" href="{{ doc.url | prepend: site.baseurl }}">{{ doc.title }}</a>
+	      					</li>
+	      					{% endfor %}
+	   			</ul>
+			</div> 
+			<div class="col-md-4">
+				<ul class="posts">
+	   						{% for doc in site.offres limit:16 %}     
+	      					<li>
+	        					<!--<span class="post-date">{{ doc.pub-date  }}</span>-->
+	        					<a class="post-link-two" href="{{ doc.url | prepend: site.baseurl }}">{{ doc.title }}</a>
+	      					</li>
+	      					{% endfor %}
+	   			</ul>
+			</div>
+		  
+		
+	</div>
+
+
+</div>

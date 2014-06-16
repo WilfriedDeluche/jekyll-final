@@ -1,0 +1,54 @@
+---
+layout: info
+title: Co-Working
+---
+
+
+
+<div class="container">
+	<div class="row">
+	<!--
+	<div class="col-md-3">
+		<div id="sidebar" data-spy="affix" data-offset-top="1" data-offset-bottom="200">
+
+			<ul class="list-group">
+	  				<a href="{{ site.collections.articles.categories[0] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.articles.categories[0] }} 
+	  				</a>
+					<a href="{{ site.collections.articles.categories[1] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item ">{{ site.collections.articles.categories[1]  }}
+					</a>
+					<a href="{{ site.collections.articles.categories[2] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.articles.categories[2] }}
+					</a>
+					<a href="{{ site.collections.articles.categories[3] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.articles.categories[3] }}
+					</a>
+					<a href="{{ site.collections.articles.categories[4] | downcase | replace:'é','e' | prepend: site.url }}" class="list-group-item">{{ site.collections.articles.categories[4] }}
+					</a>
+			</ul>
+		</div>	    
+		
+	</div> -->
+
+	<div class="col-md-8 col-md-offset-2">
+	  <div class="infos">
+		{% assign docs = site.articles | where:"cat","co-working" %} 
+		   	
+		    <ul class="media-list">
+   				{% for doc in docs %} 		    
+      					<li class="media">
+        					
+        					<a class="pull-left" href="{{ doc.url | prepend: site.baseurl }}">
+        						<img class"media-object" src="http://placehold.it/128x128"></a>
+        					<div class"media-body">
+        						<a href="{{ doc.url | prepend: site.baseurl }}">
+        						<h3 class="media-heading">{{ doc.title }}</h3>
+        						<p>{{ doc.content | strip_html | truncatewords: 30 }}</p></a>
+        						<span class="post-date">{{ doc.pub-date  }}</span>
+        					</div>
+      					</li>
+      			{% endfor %}
+   			</ul>
+   	  </div>
+
+	</div>
+  </div>
+
+</div>

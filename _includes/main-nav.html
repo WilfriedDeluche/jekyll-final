@@ -1,0 +1,93 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.url }}"><span>tagEmploi - Val Maubuée</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Offres <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.collections.offres.flux[0] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.offres.flux[0] }}</a></li>
+            <li><a href="{{ site.collections.offres.flux[1] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.offres.flux[1] }}</a></li>
+            <li><a href="{{ site.collections.offres.flux[2] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.offres.flux[2] }}</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ site.collections.offres.flux[3] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.offres.flux[3] }}</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ site.collections.offres.flux[4] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.offres.flux[4] }}</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Info <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.collections.articles.categories[0] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.articles.categories[0] }}</a></li>
+            <li><a href="{{ site.collections.articles.categories[1] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.articles.categories[1] }}</a></li>
+            <li><a href="{{ site.collections.articles.categories[2] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.articles.categories[2] }}</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ site.collections.articles.categories[3] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.articles.categories[3] }}</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ site.collections.articles.categories[4] | downcase | replace:'é','e' | prepend: site.url }}">{{ site.collections.articles.categories[4] }}</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Citoyens <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.collections.citoyens.categories[0] | downcase | replace:' ','-' | prepend: site.url   }}">{{ site.collections.citoyens.categories[0] }}</a></li>
+            <li><a href="{{ site.collections.citoyens.categories[1] | downcase | replace:' ','-' | prepend: site.url   }}">{{ site.collections.citoyens.categories[1] }}</a></li>
+            
+            <li class="divider"></li>
+            <li><a href="{{ site.collections.citoyens.categories[2] | downcase | replace:' ','-' | prepend: site.url   }}">{{ site.collections.citoyens.categories[2] }}</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entreprises <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.collections.entreprises.categories[0] | downcase | replace:' ','-' | prepend: site.url }}">{{ site.collections.entreprises.categories[0] }}</a></li>
+            
+            
+            <li class="divider"></li>
+            <li><a href="{{ site.collections.entreprises.categories[1] | downcase | replace:' ','-' | prepend: site.url }}">{{ site.collections.entreprises.categories[1] }}</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ma Ville <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.collections.maville.categories[0] | downcase | replace:' ','-' | replace:'é','e' | prepend: site.url}}">{{ site.collections.maville.categories[0] }}</a></li>
+            <li><a href="{{ site.collections.maville.categories[1] | downcase | replace:' ','-' | replace:'é','e' | prepend: site.url}}">{{ site.collections.maville.categories[1] }}</a></li>
+            <li><a href="{{ site.collections.maville.categories[2] | downcase | replace:' ','-' | replace:'é','e' | prepend: site.url}}">{{ site.collections.maville.categories[2] }}</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ site.collections.maville.categories[3] | downcase | replace:' ','-' | replace:'é','e' | prepend: site.url}}">{{ site.collections.maville.categories[3] }}</a></li>
+            
+          </ul>
+        </li>
+
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-envelope fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss fa-lg"></i></a></li>
+        
+
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

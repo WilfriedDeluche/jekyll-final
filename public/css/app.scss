@@ -1,0 +1,455 @@
+---
+
+---
+
+@import "media-queries";
+@import "bourbon/bourbon";
+
+// a flag to toggle asset pipeline / compass integration
+// defaults to true if twbs-font-path function is present (no function => twbs-font-path('') parsed as string == right side)
+// in Sass 3.3 this can be improved with: function-exists(twbs-font-path)
+$bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")')) !default;
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray:                   lighten(#000, 33.5%) !default; // #555
+$gray-light:             lighten(#000, 60%) !default;   // #999
+$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+
+$brand-primary:         #E10000;//#428bca !default;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color:            darken($gray-dark, 15%) !default;
+
+//** Global textual link color.
+$link-color:            $brand-primary !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+//** Load fonts from this directory.
+$icon-font-path: "bootstrap/" !default;
+//** File name for all font files.
+$icon-font-name:          "glyphicons-halflings-regular" !default;
+//** Element ID within SVG icon file.
+$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$line-height-large:         1.33 !default;
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary !default;
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+$caret-width-base:          4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px !default;
+
+
+
+//== Jumbotron
+//
+//##
+
+$jumbotron-padding:              30px !default;
+$jumbotron-color:                lighten($gray,15%);//inherit !default;
+$jumbotron-bg:                   transparent;//$gray-lighter !default;
+$jumbotron-heading-color:        $text-color;
+$jumbotron-font-size:            ceil(($font-size-base * 1.6)) !default;
+
+
+
+//== List group
+//
+//##
+
+//** Background color on `.list-group-item`
+$list-group-bg:                 #fff !default;
+//** `.list-group-item` border color
+$list-group-border:             lighten(#ddd,5%) !default;
+//** List group border radius
+$list-group-border-radius:      $border-radius-base !default;
+
+//** Background color of single list items on hover
+$list-group-hover-bg:           #f5f5f5 !default;
+//** Text color of active list items
+$list-group-active-color:       $component-active-color !default;
+//** Background color of active list items
+$list-group-active-bg:          $component-active-bg !default;
+//** Border color of active list elements
+$list-group-active-border:      $list-group-active-bg !default;
+//** Text color for content within active list items
+$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+
+//** Text color of disabled list items
+$list-group-disabled-color:      $gray-light !default;
+//** Background color of disabled list items
+$list-group-disabled-bg:         $gray-lighter !default;
+//** Text color for content within disabled list items
+$list-group-disabled-text-color: $list-group-disabled-color !default;
+
+$list-group-link-color:         #555 !default;
+$list-group-link-hover-color:   $list-group-link-color !default;
+$list-group-link-heading-color: #333 !default;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+//== Navbar
+//
+//##
+
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-md-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+// Basics of a navbar
+$navbar-height:                    40px !default;
+//$navbar-margin-bottom:             $line-height-computed !default;
+$navbar-border-radius:             $border-radius-base !default;
+// $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
+$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
+$navbar-collapse-max-height:       340px !default;
+
+$navbar-default-color:             #777 !default;
+$navbar-default-bg:                lighten(#f8f8f8,1%) !default;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-default-link-color:                #777 !default;
+$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         #555 !default;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar brand label
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-border-color:       #ddd !default;
+
+
+
+@import "bootstrap.scss";
+
+
+.site-header {
+  background: url("/public/img/cover.png") white no-repeat center center;
+  background-size: cover;
+  height: 42em;
+  text-align: center;
+  
+  
+  border-bottom: 1px solid #eee;
+
+  .jumbotron {
+    margin: 0 1em;
+    padding:1.5em 0 3.5em;
+  }
+
+  p {
+  	@include max-screen($screen-tablet) {
+  		font-size: 115%;
+  	}
+  }
+  .label {
+  	font-weight: 300;
+  }
+}
+
+.second-level-page-header {
+  
+  background: url("/public/img/cover.png") white no-repeat center center;
+  background-size: cover;
+  height: 12em;
+  text-align: center;
+    
+  
+  border-bottom: 1px solid #eee;
+
+  h1 {
+    margin-top: 2.5em;
+  }
+
+}
+
+.today {
+	
+		display: block;
+  		padding-bottom: 1em;
+  		font-size:70%;
+  		
+	
+	@include min-screen($screen-desktop){
+		display: inline;
+		padding: 0;
+		font-size: 100%;
+		
+	}
+	
+	@include screen($screen-tablet,$screen-desktop) {
+		display: block;
+  		padding-bottom: 0.5em;
+  		font-size:80%; 		
+	}
+}
+
+.logo {
+  @include background-image(url("/public/img/logo_valmaubuee_rouge.png"));
+  height:6em;
+  background-size: contain;
+  background-position: center top, center;
+  background-repeat: no-repeat, repeat-x;
+  margin:3em 0 1em;
+  @include min-screen($screen-desktop) {
+  	height: 8em;
+  }
+}
+
+#main-sponsor {
+	margin: .5em 0 0;
+	text-align: left;
+
+}
+
+
+.list-lien {
+	margin-bottom: 2.5em;
+}
+
+
+.post-link-one {
+  font-size: 1.25em;
+  letter-spacing: -.9px;
+  line-height: 1;
+}
+
+.post-link-two {
+  font-size: 1.15em;
+  letter-spacing: -.8px;
+  line-height: .9;
+}
+
+.container-offres, .container-infos {
+	@extend .container;
+	margin-bottom: 2.5em;
+	h1 {
+		margin-bottom: 0em;
+	}
+}
+
+.container-offres {
+	margin-top: 1.5em;
+}
+
+.container-sponsors {
+	@extend .container;
+	text-align: center;
+}
+
+.container-service {
+	@extend .container;
+	margin-bottom: 2.5em;
+
+}
+
+.container-maville {
+	@extend .container;
+	margin-bottom: 2.5em;
+
+}
+
+
+
+
+.posts {
+	list-style-type: none;
+	margin-bottom: 0em;
+	.post-date {
+  		display: block;
+  		font-size: .8em;
+  		color: #818181;
+	}
+	li { margin-bottom: .5em; }
+}
+
+
+.offres, .infos {
+  list-style-type: none;
+  margin: 2.5em 0;
+  .post-date, .post-origine {
+      
+      display: inline;
+      font-size: 1em;
+      color: lighten(#818181,15%);
+  }
+  .post-ville {
+      
+      display: inline;
+      font-size: 1em;
+      color: #818181;
+  }
+  h3 {
+    margin-top: 0;
+  }
+
+  li { margin-bottom: 4.5em; }
+}
+
+.foot-index-offres {
+  margin-top: 1em;
+}
+
+.post-index-content {
+  display: block;
+   margin: 0; }
+
+.site-footer {
+	background-color: #E5E5E5;
+	text-align: center;
+}
+
+.affix {
+  //width: inherit; //helped keep the content the same size on fluid layouts
+  position: fixed;
+  top: auto;  //height of the nav
+}
+.affix-bottom {
+  //width: inherit;
+  position: absolute;
+  top: auto;
+  //bottom: 1px;  //height of the footer
+}
+.affix-top {
+  //don't need this style but you might
+}
+
+.post-content img {
+  
+  margin: auto;
+}
+
+
