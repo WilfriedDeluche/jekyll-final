@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your awesome title</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+    <link rel="canonical" href="http://localhost:4000//">
+
+    <!-- Custom CSS -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="/public/css/app.css">
+
+</head>
+
+
+    <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:4000/"><span>Emplois <i class="fa fa-map-marker"></i> Val Maubuée</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Offres <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://localhost:4000/emploi">Emploi</a></li>
+            <li><a href="http://localhost:4000/formation">Formation</a></li>
+            <li><a href="http://localhost:4000/alternance">Alternance</a></li>
+            <li class="divider"></li>
+            <li><a href="http://localhost:4000/flux-4">Flux-4</a></li>
+            <li class="divider"></li>
+            <li><a href="http://localhost:4000/flux-5">Flux-5</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Info <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://localhost:4000/actualite">Actualité</a></li>
+            <li><a href="http://localhost:4000/agenda">Agenda</a></li>
+            <li><a href="http://localhost:4000/co-working">Co-working</a></li>
+            <li class="divider"></li>
+            <li><a href="http://localhost:4000/tele-travail">Télé-travail</a></li>
+            <li class="divider"></li>
+            <li><a href="http://localhost:4000/entreprendre">Entreprendre</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Citoyens <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://localhost:4000/contacts">Contacts</a></li>
+            <li><a href="http://localhost:4000/annuaire-entreprises">Annuaire Entreprises</a></li>
+            
+            <li class="divider"></li>
+            <li><a href="http://localhost:4000/poster-une-offre">Poster une Offre</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entreprises <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://localhost:4000/contacts">Contacts</a></li>
+            
+            
+            <li class="divider"></li>
+            <li><a href="http://localhost:4000/poster-une-offre">Poster une Offre</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ma Ville <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://localhost:4000/le-mot-du-maire">Le Mot du Maire</a></li>
+            <li><a href="http://localhost:4000/un-territoire-innovant">Un Territoire Innovant</a></li>
+            <li><a href="http://localhost:4000/une-situation-ideale">Une Situation Idéale</a></li>
+            <li class="divider"></li>
+            <li><a href="http://localhost:4000/suivez-nous">Suivez-nous</a></li>
+            
+          </ul>
+        </li>
+
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-envelope fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a></li>
+        <li><a href="#"><i class="fa fa-rss fa-lg"></i></a></li>
+        
+
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+<header class="site-header">
+
+  <div class="container">
+    <div class="jumbotron">
+      <div class="logo"></div>
+          
+        <p class="lead hidden-xs">Service citoyen dédié au développement économique et au soutien de l'emploi local.</p>
+            <h1>Aujourd'hui près de chez moi</h1>
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2 center">
+                <div class="col-sm-6">
+                 <h2>
+                  <div class="today"><a class="btn btn-primary">1283 Offres disponibles</a></div> </h2>
+                </div>
+                <div class="col-sm-6">
+                  <h2>
+                  <div class="today"><a class="btn btn-primary">16 juin 2014 - Salon de l'Emploi</a></div> </h2>
+                </div>
+              </div>
+            </div>
+    </div>
+        
+        <div class="row hidden-xs hidden-sm" id="main-sponsor">
+          <div class="col-sm-2 col-sm-offset-1 col-md-offset-2 col-md-1">
+            <a href="" ><img class="img-responsive" src="{{ site.baseurl }}/public/img/cavm-noir.png"></a>
+          </div>
+          <div class="col-sm-9 col-md-9">
+            <p class="lead">
+            Ce service est proposé par l'Agglomération Val&nbsp;Maubuée.
+            </p>
+          </div>
+        </div>
+        
+  </div>
+</header>
+
+
+    
+      
+      
+<div class="container-offres">
+	<h1>Les Offres</h1>
+	<div class="row visible-md visible-lg">
+
+		<div class="col-md-8 col-md-offset-4">
+			<p class="lead text-left">Les dernières offres</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<ul class="list-group">
+	  				<a href="http://localhost:4000/emploi" class="list-group-item">Emploi
+					<span class="badge">1344</span></a>
+					<a href="http://localhost:4000/formation" class="list-group-item">Formation
+					<span class="badge">278</span></a>
+					<a href="http://localhost:4000/alternance" class="list-group-item">Alternance
+					<span class="badge">278</span></a>
+					<a href="http://localhost:4000/flux-4" class="list-group-item">Flux-4
+					<span class="badge">278</span></a>
+					<a href="http://localhost:4000/flux-5" class="list-group-item">Flux-5
+					<span class="badge">278</span></a>
+				</ul>
+		</div>
+
+			    
+			<div class="col-md-4">
+
+			<p class="lead text-left visible-xs">Les dernières offres</p>
+				
+				<ul class="posts">
+	   						     
+	      					<li>
+	        					<!--<span class="post-date">18 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-18-business-developer-senior.html">Business Developer Senior (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">18 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-18-graphiste.html">Graphiste (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">24 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-24-charge-de-marketing-numerique-junior.html">Chargé de marketing numérique junior</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">24 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-24-online-marketing-manager-europe-du-sud.html">Online Marketing Manager Europe du Sud (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">30 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-30-chef-de-projet-digital-(h-f).html">Chef de Projet Digital (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">30 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-30-content-community-manager-(h-f).html">Content & Community Manager (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-head-of-analytics-crm-(h-f).html">Head of Analytics / CRM (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-online-media-manager-europe-(h-f).html">Online Media Manager Europe (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-responsable-webmarketing-(h-f).html">Responsable Webmarketing (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-senior-web-developer-(h-f).html">Senior Web Developer (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-trafic-manager-(h-f).html">Trafic Manager (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-webmarketing-les-grappes-(h-f).html">Webmarketing Les Grappes (H/F)</a>
+	      					</li>
+	      					
+	   			</ul>
+			</div> 
+			<div class="col-md-4">
+				<ul class="posts">
+	   						     
+	      					<li>
+	        					<!--<span class="post-date">18 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-18-business-developer-senior.html">Business Developer Senior (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">18 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-18-graphiste.html">Graphiste (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">24 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-24-charge-de-marketing-numerique-junior.html">Chargé de marketing numérique junior</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">24 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-24-online-marketing-manager-europe-du-sud.html">Online Marketing Manager Europe du Sud (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">30 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-30-chef-de-projet-digital-(h-f).html">Chef de Projet Digital (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date">30 Avr 2014</span>-->
+	        					<a class="post-link-two" href="/offres/2014-04-30-content-community-manager-(h-f).html">Content & Community Manager (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-head-of-analytics-crm-(h-f).html">Head of Analytics / CRM (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-online-media-manager-europe-(h-f).html">Online Media Manager Europe (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-responsable-webmarketing-(h-f).html">Responsable Webmarketing (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-senior-web-developer-(h-f).html">Senior Web Developer (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-trafic-manager-(h-f).html">Trafic Manager (H/F)</a>
+	      					</li>
+	      					     
+	      					<li>
+	        					<!--<span class="post-date"></span>-->
+	        					<a class="post-link-two" href="/offres/2014-05-02-webmarketing-les-grappes-(h-f).html">Webmarketing Les Grappes (H/F)</a>
+	      					</li>
+	      					
+	   			</ul>
+			</div>
+		  
+		
+	</div>
+
+
+</div>
+
+<hr>
+<div class="container-infos">
+	<h1>Les Infos</h1>
+	<div class="row visible-md visible-lg">
+
+		<div class="col-md-4 col-md-offset-4">
+			<p class="lead">L'évènement</p>
+		</div>
+		<div class="col-md-4">
+			<p class="lead">Les derniers articles</p>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<ul class="list-group">
+	  				<a href="http://localhost:4000/actualite" class="list-group-item">Actualité 
+	  				</a>
+					<a href="http://localhost:4000/agenda" class="list-group-item list-group-item-succ">Agenda
+					</a>
+					<a href="http://localhost:4000/co-working" class="list-group-item">Co-working
+					</a>
+					<a href="http://localhost:4000/tele-travail" class="list-group-item">Télé-travail
+					</a>
+					<a href="http://localhost:4000/entreprendre" class="list-group-item">Entreprendre
+					</a>
+				</ul>
+			
+		</div>
+
+	
+		    
+
+			<div class="col-md-4 hidden-xs">
+				
+				     
+      					
+        					
+        					<a class="thumbnail" href="/articles/2014-06-01-salon-emploi.html">
+        						<img src="{{ site.baseurl }}/public/img/forum_emploi-bondy.jpg" class="img-responsive">
+							       <div class="caption">
+							        <h3><small> Le 21 juil 2014</small><br>Forum du Projet à l'Emploi</h3>
+							        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridicu...</p>
+							        
+							      </div>
+        					</a>
+      					
+      					
+			</div> 
+			<div class="col-md-4 hidden-xs">
+				<ul class="media-list">
+   						     
+      					<li class="media">
+        					<!--<span class="post-date">21 juin 2014</span>-->
+        					<a class="pull-left" href="/articles/2013-12-31-whats-jekyll-copie-2.html">
+        						<img class"media-object" src="http://placehold.it/64x64"></a>
+        					<div class"media-body">
+        						<a href="/articles/2013-12-31-whats-jekyll-copie-2.html">
+        						<h4 class="media-heading">What's Jekyll?</h4>
+        						<p>Jekyll is a static site generator, an open-source tool for creating simple ye...</p></a>
+        					</div>
+      					</li>
+      					     
+      					<li class="media">
+        					<!--<span class="post-date">21 juin 2014</span>-->
+        					<a class="pull-left" href="/articles/2013-12-31-whats-jekyll-copie-3.html">
+        						<img class"media-object" src="http://placehold.it/64x64"></a>
+        					<div class"media-body">
+        						<a href="/articles/2013-12-31-whats-jekyll-copie-3.html">
+        						<h4 class="media-heading">What's Jekyll?</h4>
+        						<p>Jekyll is a static site generator, an open-source tool for creating simple ye...</p></a>
+        					</div>
+      					</li>
+      					     
+      					<li class="media">
+        					<!--<span class="post-date">21 juin 2014</span>-->
+        					<a class="pull-left" href="/articles/2013-12-31-whats-jekyll-copie.html">
+        						<img class"media-object" src="http://placehold.it/64x64"></a>
+        					<div class"media-body">
+        						<a href="/articles/2013-12-31-whats-jekyll-copie.html">
+        						<h4 class="media-heading">What's Jekyll?</h4>
+        						<p>Jekyll is a static site generator, an open-source tool for creating simple ye...</p></a>
+        					</div>
+      					</li>
+      					     
+      					<li class="media">
+        					<!--<span class="post-date">21 juin 2014</span>-->
+        					<a class="pull-left" href="/articles/2013-12-31-whats-jekyll.html">
+        						<img class"media-object" src="http://placehold.it/64x64"></a>
+        					<div class"media-body">
+        						<a href="/articles/2013-12-31-whats-jekyll.html">
+        						<h4 class="media-heading">What's Jekyll?</h4>
+        						<p>Jekyll is a static site generator, an open-source tool for creating simple ye...</p></a>
+        					</div>
+      					</li>
+      					     
+      					<li class="media">
+        					<!--<span class="post-date"></span>-->
+        					<a class="pull-left" href="/articles/2014-01-01-example-content.html">
+        						<img class"media-object" src="http://placehold.it/64x64"></a>
+        					<div class"media-body">
+        						<a href="/articles/2014-01-01-example-content.html">
+        						<h4 class="media-heading">Example content</h4>
+        						<p>
+  Howdy! This is an example blog post that shows several types of HTML cont...</p></a>
+        					</div>
+      					</li>
+      					     
+      					<li class="media">
+        					<!--<span class="post-date"></span>-->
+        					<a class="pull-left" href="/articles/2014-01-01-example-salon.html">
+        						<img class"media-object" src="http://placehold.it/64x64"></a>
+        					<div class"media-body">
+        						<a href="/articles/2014-01-01-example-salon.html">
+        						<h4 class="media-heading">Example content</h4>
+        						<p>
+  Howdy! This is an example blog post that shows several types of HTML cont...</p></a>
+        					</div>
+      					</li>
+      					     
+      					<li class="media">
+        					<!--<span class="post-date"></span>-->
+        					<a class="pull-left" href="/articles/2014-06-06-un-autre-article.html">
+        						<img class"media-object" src="http://placehold.it/64x64"></a>
+        					<div class"media-body">
+        						<a href="/articles/2014-06-06-un-autre-article.html">
+        						<h4 class="media-heading">Example content</h4>
+        						<p>
+  Howdy! This is an example blog post that shows several types of HTML cont...</p></a>
+        					</div>
+      					</li>
+      					     
+      					<li class="media">
+        					<!--<span class="post-date"></span>-->
+        					<a class="pull-left" href="/articles/2014-06-07-autre-article.html">
+        						<img class"media-object" src="http://placehold.it/64x64"></a>
+        					<div class"media-body">
+        						<a href="/articles/2014-06-07-autre-article.html">
+        						<h4 class="media-heading">Example content</h4>
+        						<p>
+  Howdy! This is an example blog post that shows several types of HTML cont...</p></a>
+        					</div>
+      					</li>
+      					
+   					</ul>
+			</div>
+		  
+		
+	</div>
+
+
+</div>
+
+
+<hr>
+<div class="container-service">
+	<h1> A Votre Service</h1>
+	
+	<div class="row">
+		<div class="col-md-10 col-md-offset-2">
+
+			<div class="col-md-5">
+				<p class="lead"><i class="fa fa-user fa-2x"></i> Citoyens</p>
+				
+				<ul class="list-group">
+			  				<a href="http://localhost:4000/contacts" class="list-group-item">Vos Contacts</a>
+							<a href="http://localhost:4000/annuaire-entreprises" class="list-group-item list-group-item-succ">Annuaire des entreprises</a>
+							<a href="http://localhost:4000/poster-une-offre" class="list-group-item">Poster une Offre</a>
+							
+				</ul>
+			</div> 
+			<div class="col-md-5">
+				
+				<p class="lead"><i class="fa fa-building fa-2x"></i> Entreprises</p>
+				<ul class="list-group">
+			  			<a href="http://localhost:4000/contacts" class="list-group-item">Vos Contacts</a>
+							
+						<a href="http://localhost:4000/poster-une-offre" class="list-group-item">Poster une Offre</a>
+							
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<hr>
+<div class="container-maville">
+	<h1>Ma Ville</h1>
+	
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<ul class="list-group">
+	  				<a href="http://localhost:4000/le-mot-du-maire" class="list-group-item">Le Mot du Maire
+					</a>
+					<a href="http://localhost:4000/un-territoire-innovant" class="list-group-item">Un Territoire Innovant
+					</a>
+					<a href="http://localhost:4000/une-situation-ideale" class="list-group-item">Une Situation Idéale
+					</a>
+					<a href="http://localhost:4000/suivez-nous" class="list-group-item">Suivez-nous
+					</a>
+					
+			</ul>
+		</div>
+
+	
+		    
+
+			<div class="col-md-8 hidden-xs">
+				
+				<ul class="media-list">
+	   					     
+      					<li class="media">
+        					<!--<span class="post-date">21 juin 2014</span>-->
+        					<a class="pull-left" href="/articles/2013-12-31-whats-jekyll-copie-2.html">
+        						<img class"media-object" src="http://placehold.it/128x128"></a>
+        					<div class"media-body">
+        						
+        						<blockquote>
+        						
+        						<p>Jekyll is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From [the project's readme](https://github.com/mojombo/jekyll/blob/master/R...</p>
+        						<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        						</blockquote>
+        					</div>
+      					</li>
+      					     
+      					<li class="media">
+        					<!--<span class="post-date">21 juin 2014</span>-->
+        					<a class="pull-left" href="/articles/2013-12-31-whats-jekyll-copie-3.html">
+        						<img class"media-object" src="http://placehold.it/128x128"></a>
+        					<div class"media-body">
+        						
+        						<blockquote>
+        						
+        						<p>Jekyll is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From [the project's readme](https://github.com/mojombo/jekyll/blob/master/R...</p>
+        						<footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+        						</blockquote>
+        					</div>
+      					</li>
+      					
+	   			</ul>
+			</div> 
+			
+		  
+		
+	</div>
+
+
+</div>
+      
+    
+
+    
+<footer class="site-footer">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h3><small>A propos</small></h3>
+      </div>
+
+      <div class="col-md-3">
+        <h3><small>Les Offres</small></h3>
+        
+          <a href="emploi">Emploi</a><br>
+
+        
+          <a href="formation">Formation</a><br>
+
+        
+          <a href="alternance">Alternance</a><br>
+
+        
+          <a href="flux-4">Flux-4</a><br>
+
+        
+          <a href="flux-5">Flux-5</a><br>
+
+        
+      </div>
+
+      <div class="col-md-3">
+        <h3><small>Les Infos</small></h3>
+        
+          <a href="actualite">Actualité</a><br>
+
+        
+          <a href="agenda">Agenda</a><br>
+
+        
+          <a href="co-working">Co-working</a><br>
+
+        
+          <a href="tele-travail">Télé-travail</a><br>
+
+        
+          <a href="entreprendre">Entreprendre</a><br>
+
+        
+      </div>
+
+      <div class="col-md-3">
+        <h3><small>Restons en contact</small></h3>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    </body>
+</html>
