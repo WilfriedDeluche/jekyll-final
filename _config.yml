@@ -5,7 +5,7 @@ description: "Write an awesome description for your new site here. You can edit 
 baseurl: "/jekyll-final"
 url: "http://localhost:4000/"
 
-base-img-url: "http://localhost:4000/public/img/"
+base-img-url: "{{ site.baseurl }}/public/img/"
 
 # Build settings
 markdown: kramdown
